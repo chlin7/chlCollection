@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2202C9941B21D91D003B9549 /* UIImage+chlImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2202C9931B21D91D003B9549 /* UIImage+chlImage.m */; };
-		2296E7371B23193400CD4985 /* HLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2296E7361B23193400CD4985 /* HLTabBar.m */; };
-		2296E73A1B232F1C00CD4985 /* HLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2296E7391B232F1C00CD4985 /* HLTabBarItem.m */; };
-		22A0D42D1B2476A40039008C /* HLBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A0D42C1B2476A40039008C /* HLBadgeButton.m */; };
+		22CC234E1B6CA2710055FB53 /* UIImage+chlImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC234D1B6CA2710055FB53 /* UIImage+chlImage.m */; };
+		22CC23661B6CA3350055FB53 /* HLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23521B6CA3350055FB53 /* HLTabBarViewController.m */; };
+		22CC23671B6CA3350055FB53 /* HLBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23551B6CA3350055FB53 /* HLBadgeButton.m */; };
+		22CC23681B6CA3350055FB53 /* HLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23571B6CA3350055FB53 /* HLTabBar.m */; };
+		22CC23691B6CA3350055FB53 /* HLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23591B6CA3350055FB53 /* HLTabBarItem.m */; };
+		22CC236A1B6CA3350055FB53 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC235C1B6CA3350055FB53 /* HLHomeViewController.m */; };
+		22CC236B1B6CA3350055FB53 /* HLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC235F1B6CA3350055FB53 /* HLMessageViewController.m */; };
+		22CC236C1B6CA3350055FB53 /* HLDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23621B6CA3350055FB53 /* HLDiscoverViewController.m */; };
+		22CC236D1B6CA3350055FB53 /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23651B6CA3350055FB53 /* HLMineViewController.m */; };
 		22F7CAF01B1F52FE0059EDF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CAEF1B1F52FE0059EDF3 /* main.m */; };
 		22F7CAF31B1F52FE0059EDF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CAF21B1F52FE0059EDF3 /* AppDelegate.m */; };
 		22F7CAFB1B1F52FE0059EDF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F7CAFA1B1F52FE0059EDF3 /* Images.xcassets */; };
 		22F7CAFE1B1F52FE0059EDF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F7CAFC1B1F52FE0059EDF3 /* LaunchScreen.xib */; };
 		22F7CB0A1B1F52FE0059EDF3 /* chlWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CB091B1F52FE0059EDF3 /* chlWeiboTests.m */; };
-		22F7CB171B1F55A60059EDF3 /* HLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CB161B1F55A60059EDF3 /* HLTabBarViewController.m */; };
-		22F7CB1E1B1F56580059EDF3 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CB1D1B1F56580059EDF3 /* HLHomeViewController.m */; };
-		22F7CB211B1F56700059EDF3 /* HLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CB201B1F56700059EDF3 /* HLMessageViewController.m */; };
-		22F7CB241B1F56800059EDF3 /* HLDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CB231B1F56800059EDF3 /* HLDiscoverViewController.m */; };
-		22F7CB271B1F568F0059EDF3 /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CB261B1F568F0059EDF3 /* HLMineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +35,24 @@
 
 /* Begin PBXFileReference section */
 		2202C9901B21D642003B9549 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		2202C9921B21D91D003B9549 /* UIImage+chlImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+chlImage.h"; sourceTree = "<group>"; };
-		2202C9931B21D91D003B9549 /* UIImage+chlImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+chlImage.m"; sourceTree = "<group>"; };
-		2296E7351B23193400CD4985 /* HLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTabBar.h; sourceTree = "<group>"; };
-		2296E7361B23193400CD4985 /* HLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTabBar.m; sourceTree = "<group>"; };
-		2296E7381B232F1C00CD4985 /* HLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTabBarItem.h; sourceTree = "<group>"; };
-		2296E7391B232F1C00CD4985 /* HLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTabBarItem.m; sourceTree = "<group>"; };
-		22A0D42B1B2476A40039008C /* HLBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBadgeButton.h; sourceTree = "<group>"; };
-		22A0D42C1B2476A40039008C /* HLBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBadgeButton.m; sourceTree = "<group>"; };
+		22CC234C1B6CA2710055FB53 /* UIImage+chlImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+chlImage.h"; sourceTree = "<group>"; };
+		22CC234D1B6CA2710055FB53 /* UIImage+chlImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+chlImage.m"; sourceTree = "<group>"; };
+		22CC23511B6CA3350055FB53 /* HLTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTabBarViewController.h; sourceTree = "<group>"; };
+		22CC23521B6CA3350055FB53 /* HLTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTabBarViewController.m; sourceTree = "<group>"; };
+		22CC23541B6CA3350055FB53 /* HLBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBadgeButton.h; sourceTree = "<group>"; };
+		22CC23551B6CA3350055FB53 /* HLBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBadgeButton.m; sourceTree = "<group>"; };
+		22CC23561B6CA3350055FB53 /* HLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTabBar.h; sourceTree = "<group>"; };
+		22CC23571B6CA3350055FB53 /* HLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTabBar.m; sourceTree = "<group>"; };
+		22CC23581B6CA3350055FB53 /* HLTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTabBarItem.h; sourceTree = "<group>"; };
+		22CC23591B6CA3350055FB53 /* HLTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTabBarItem.m; sourceTree = "<group>"; };
+		22CC235B1B6CA3350055FB53 /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		22CC235C1B6CA3350055FB53 /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
+		22CC235E1B6CA3350055FB53 /* HLMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMessageViewController.h; sourceTree = "<group>"; };
+		22CC235F1B6CA3350055FB53 /* HLMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMessageViewController.m; sourceTree = "<group>"; };
+		22CC23611B6CA3350055FB53 /* HLDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDiscoverViewController.h; sourceTree = "<group>"; };
+		22CC23621B6CA3350055FB53 /* HLDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDiscoverViewController.m; sourceTree = "<group>"; };
+		22CC23641B6CA3350055FB53 /* HLMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMineViewController.h; sourceTree = "<group>"; };
+		22CC23651B6CA3350055FB53 /* HLMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMineViewController.m; sourceTree = "<group>"; };
 		22F7CAEA1B1F52FE0059EDF3 /* chlWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chlWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F7CAEE1B1F52FE0059EDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F7CAEF1B1F52FE0059EDF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,16 +63,6 @@
 		22F7CB031B1F52FE0059EDF3 /* chlWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chlWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F7CB081B1F52FE0059EDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F7CB091B1F52FE0059EDF3 /* chlWeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chlWeiboTests.m; sourceTree = "<group>"; };
-		22F7CB151B1F55A60059EDF3 /* HLTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTabBarViewController.h; sourceTree = "<group>"; };
-		22F7CB161B1F55A60059EDF3 /* HLTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTabBarViewController.m; sourceTree = "<group>"; };
-		22F7CB1C1B1F56580059EDF3 /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
-		22F7CB1D1B1F56580059EDF3 /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
-		22F7CB1F1B1F56700059EDF3 /* HLMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMessageViewController.h; sourceTree = "<group>"; };
-		22F7CB201B1F56700059EDF3 /* HLMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMessageViewController.m; sourceTree = "<group>"; };
-		22F7CB221B1F56800059EDF3 /* HLDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDiscoverViewController.h; sourceTree = "<group>"; };
-		22F7CB231B1F56800059EDF3 /* HLDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDiscoverViewController.m; sourceTree = "<group>"; };
-		22F7CB251B1F568F0059EDF3 /* HLMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMineViewController.h; sourceTree = "<group>"; };
-		22F7CB261B1F568F0059EDF3 /* HLMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,43 +83,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2202C98E1B21D56D003B9549 /* Controller */ = {
+		22CC234A1B6CA2710055FB53 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22F7CB151B1F55A60059EDF3 /* HLTabBarViewController.h */,
-				22F7CB161B1F55A60059EDF3 /* HLTabBarViewController.m */,
+				22CC234F1B6CA3350055FB53 /* Main */,
+				22CC235A1B6CA3350055FB53 /* Home */,
+				22CC235D1B6CA3350055FB53 /* Message */,
+				22CC23601B6CA3350055FB53 /* Discover */,
+				22CC23631B6CA3350055FB53 /* Mine */,
+				22CC234B1B6CA2710055FB53 /* PublicUtil */,
 			);
-			name = Controller;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		2202C98F1B21D62A003B9549 /* Other */ = {
+		22CC234B1B6CA2710055FB53 /* PublicUtil */ = {
 			isa = PBXGroup;
 			children = (
-				2202C9911B21D8AA003B9549 /* Catergory */,
+				22CC234C1B6CA2710055FB53 /* UIImage+chlImage.h */,
+				22CC234D1B6CA2710055FB53 /* UIImage+chlImage.m */,
 			);
-			name = Other;
+			path = PublicUtil;
 			sourceTree = "<group>";
 		};
-		2202C9911B21D8AA003B9549 /* Catergory */ = {
+		22CC234F1B6CA3350055FB53 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2202C9921B21D91D003B9549 /* UIImage+chlImage.h */,
-				2202C9931B21D91D003B9549 /* UIImage+chlImage.m */,
+				22CC23501B6CA3350055FB53 /* Controller */,
+				22CC23531B6CA3350055FB53 /* View */,
 			);
-			name = Catergory;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		2296E7341B23190F00CD4985 /* View */ = {
+		22CC23501B6CA3350055FB53 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2296E7351B23193400CD4985 /* HLTabBar.h */,
-				2296E7361B23193400CD4985 /* HLTabBar.m */,
-				2296E7381B232F1C00CD4985 /* HLTabBarItem.h */,
-				2296E7391B232F1C00CD4985 /* HLTabBarItem.m */,
-				22A0D42B1B2476A40039008C /* HLBadgeButton.h */,
-				22A0D42C1B2476A40039008C /* HLBadgeButton.m */,
+				22CC23511B6CA3350055FB53 /* HLTabBarViewController.h */,
+				22CC23521B6CA3350055FB53 /* HLTabBarViewController.m */,
 			);
-			name = View;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CC23531B6CA3350055FB53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22CC23541B6CA3350055FB53 /* HLBadgeButton.h */,
+				22CC23551B6CA3350055FB53 /* HLBadgeButton.m */,
+				22CC23561B6CA3350055FB53 /* HLTabBar.h */,
+				22CC23571B6CA3350055FB53 /* HLTabBar.m */,
+				22CC23581B6CA3350055FB53 /* HLTabBarItem.h */,
+				22CC23591B6CA3350055FB53 /* HLTabBarItem.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22CC235A1B6CA3350055FB53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22CC235B1B6CA3350055FB53 /* HLHomeViewController.h */,
+				22CC235C1B6CA3350055FB53 /* HLHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22CC235D1B6CA3350055FB53 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				22CC235E1B6CA3350055FB53 /* HLMessageViewController.h */,
+				22CC235F1B6CA3350055FB53 /* HLMessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		22CC23601B6CA3350055FB53 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				22CC23611B6CA3350055FB53 /* HLDiscoverViewController.h */,
+				22CC23621B6CA3350055FB53 /* HLDiscoverViewController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		22CC23631B6CA3350055FB53 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				22CC23641B6CA3350055FB53 /* HLMineViewController.h */,
+				22CC23651B6CA3350055FB53 /* HLMineViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		22F7CAE11B1F52FE0059EDF3 = {
@@ -143,7 +193,7 @@
 		22F7CAEC1B1F52FE0059EDF3 /* chlWeibo */ = {
 			isa = PBXGroup;
 			children = (
-				22F7CB131B1F555A0059EDF3 /* Classes */,
+				22CC234A1B6CA2710055FB53 /* Classes */,
 				22F7CAF11B1F52FE0059EDF3 /* AppDelegate.h */,
 				22F7CAF21B1F52FE0059EDF3 /* AppDelegate.m */,
 				22F7CAED1B1F52FE0059EDF3 /* Supporting Files */,
@@ -178,64 +228,6 @@
 				22F7CB081B1F52FE0059EDF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		22F7CB131B1F555A0059EDF3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2202C98F1B21D62A003B9549 /* Other */,
-				22F7CB1B1B1F56360059EDF3 /* Mine */,
-				22F7CB1A1B1F561E0059EDF3 /* Discover */,
-				22F7CB191B1F56130059EDF3 /* Message */,
-				22F7CB181B1F56090059EDF3 /* Home */,
-				22F7CB141B1F556C0059EDF3 /* Main */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		22F7CB141B1F556C0059EDF3 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				2296E7341B23190F00CD4985 /* View */,
-				2202C98E1B21D56D003B9549 /* Controller */,
-			);
-			name = Main;
-			sourceTree = "<group>";
-		};
-		22F7CB181B1F56090059EDF3 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				22F7CB1C1B1F56580059EDF3 /* HLHomeViewController.h */,
-				22F7CB1D1B1F56580059EDF3 /* HLHomeViewController.m */,
-			);
-			name = Home;
-			sourceTree = "<group>";
-		};
-		22F7CB191B1F56130059EDF3 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				22F7CB1F1B1F56700059EDF3 /* HLMessageViewController.h */,
-				22F7CB201B1F56700059EDF3 /* HLMessageViewController.m */,
-			);
-			name = Message;
-			sourceTree = "<group>";
-		};
-		22F7CB1A1B1F561E0059EDF3 /* Discover */ = {
-			isa = PBXGroup;
-			children = (
-				22F7CB221B1F56800059EDF3 /* HLDiscoverViewController.h */,
-				22F7CB231B1F56800059EDF3 /* HLDiscoverViewController.m */,
-			);
-			name = Discover;
-			sourceTree = "<group>";
-		};
-		22F7CB1B1B1F56360059EDF3 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				22F7CB251B1F568F0059EDF3 /* HLMineViewController.h */,
-				22F7CB261B1F568F0059EDF3 /* HLMineViewController.m */,
-			);
-			name = Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,16 +330,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F7CAF31B1F52FE0059EDF3 /* AppDelegate.m in Sources */,
-				22F7CB271B1F568F0059EDF3 /* HLMineViewController.m in Sources */,
-				22F7CB241B1F56800059EDF3 /* HLDiscoverViewController.m in Sources */,
-				2202C9941B21D91D003B9549 /* UIImage+chlImage.m in Sources */,
-				22A0D42D1B2476A40039008C /* HLBadgeButton.m in Sources */,
-				2296E73A1B232F1C00CD4985 /* HLTabBarItem.m in Sources */,
-				22F7CB1E1B1F56580059EDF3 /* HLHomeViewController.m in Sources */,
-				2296E7371B23193400CD4985 /* HLTabBar.m in Sources */,
-				22F7CB171B1F55A60059EDF3 /* HLTabBarViewController.m in Sources */,
+				22CC23691B6CA3350055FB53 /* HLTabBarItem.m in Sources */,
+				22CC236B1B6CA3350055FB53 /* HLMessageViewController.m in Sources */,
+				22CC236D1B6CA3350055FB53 /* HLMineViewController.m in Sources */,
+				22CC234E1B6CA2710055FB53 /* UIImage+chlImage.m in Sources */,
+				22CC23671B6CA3350055FB53 /* HLBadgeButton.m in Sources */,
+				22CC236C1B6CA3350055FB53 /* HLDiscoverViewController.m in Sources */,
+				22CC23661B6CA3350055FB53 /* HLTabBarViewController.m in Sources */,
+				22CC236A1B6CA3350055FB53 /* HLHomeViewController.m in Sources */,
 				22F7CAF01B1F52FE0059EDF3 /* main.m in Sources */,
-				22F7CB211B1F56700059EDF3 /* HLMessageViewController.m in Sources */,
+				22CC23681B6CA3350055FB53 /* HLTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
