@@ -11,12 +11,23 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+    #import<UIKit/UIKit.h>
+    #import<Foundation/Foundation.h>
+#import "UIImage+HL.h"
 
-
+//1.0判断系统版本
 #define IOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
-#import "UIImage+chlImage.h"
-
-//RGB 颜色
+//2. 获取RGB 颜色
 #define HLColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//3.0自定义Log
+#ifdef DEBUG  //调试阶段
+#define DEBUGLog(...)         NSLog(__VA_ARGS__)
+#else         //发布阶段
+#define   DEBUGLog(...)
+#endif
+
+#endif
 #endif

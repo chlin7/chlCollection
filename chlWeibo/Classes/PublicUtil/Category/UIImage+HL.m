@@ -1,15 +1,14 @@
 //
-//  UIImage+chlImage.m
+//  UIImage+HL.m
 //  chlWeibo
 //
-//  Created by chlin7 on 15-6-5.
+//  Created by chlin7 on 15/8/1.
 //  Copyright (c) 2015年 chlin7. All rights reserved.
 //
 
-#import "UIImage+chlImage.h"
+#import "UIImage+HL.h"
 
-@implementation UIImage (chlImage)
-
+@implementation UIImage (HL)
 /**
  *  设置UIImage，设置IOS7判断
  *

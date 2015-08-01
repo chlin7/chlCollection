@@ -7,6 +7,7 @@
 //
 
 #import "HLTabBarViewController.h"
+#import "HLNavigationController.h"
 #import "HLHomeViewController.h"
 #import "HLMessageViewController.h"
 #import "HLDiscoverViewController.h"
@@ -86,7 +87,7 @@
     //设置选中的图标
     childVc.tabBarItem.selectedImage = [[UIImage imageWithName:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //2.包装成导航
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+    HLNavigationController *nav = [[HLNavigationController alloc] initWithRootViewController:childVc];
     
     [self addChildViewController:nav];
     //添加tabbar

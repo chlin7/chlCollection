@@ -1,17 +1,16 @@
 //
-//  UIImage+chlImage.h
+//  UIImage+HL.h
 //  chlWeibo
 //
-//  Created by chlin7 on 15-6-5.
+//  Created by chlin7 on 15/8/1.
 //  Copyright (c) 2015年 chlin7. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (chlImage)
-
+@interface UIImage (HL)
 /**
- *根据是否是》IOS7饭后不同名称的图片
+ *根据是否是》IOS7返回不同名称的图片
  */
 +(UIImage *)imageWithName:(NSString *)name;
 
