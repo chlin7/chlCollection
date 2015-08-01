@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>00B4D500-6454-4CC0-94FA-B0680866C8C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>chlWeibo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04C3C7723E4209A8639CFAED3629C72F517EAC88</key>
+		<string>https://github.com/chlin7/chlCollection.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>chlWeibo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04C3C7723E4209A8639CFAED3629C72F517EAC88</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chlin7/chlCollection.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04C3C7723E4209A8639CFAED3629C72F517EAC88</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04C3C7723E4209A8639CFAED3629C72F517EAC88</string>
+			<key>IDESourceControlWCCName</key>
+			<string>chlWeibo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
