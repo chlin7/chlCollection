@@ -8,6 +8,7 @@
 
 #import "HLHomeViewController.h"
 #import "UIBarButtonItem+HL.h"
+#import "HLTitleButton.h"
 
 @interface HLHomeViewController ()
 
@@ -21,8 +22,28 @@
      self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithIcon:@"navigationbar_friendsearch" highIcon:@"navigationbar_friendsearch_highlighted"  target:self action:@selector(leftBtnItemClick)];
     //导航右边自定义图片按钮
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"navigationbar_pop" highIcon:@"navigationbar_pop_highlighted"  target:self action:@selector(rightBtnItemClick)];
+    //设置中间的按钮
+    HLTitleButton *titleBtn = [[HLTitleButton alloc] init];
+    //图标
+    [titleBtn setImage:[UIImage imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    //文字
+    [titleBtn setTitle:@"哈哈哈" forState:UIControlStateNormal];
+    titleBtn.frame = CGRectMake(0, 0, 100, 40);
+    
+    [titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = titleBtn;
 }
-
+- (void)titleClick:(HLTitleButton *)titleButton
+{
+    if (titleButton.selected) {
+        titleButton.selected = NO;
+        [titleButton setImage:[UIImage imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    }else{
+        titleButton.selected = YES;
+        [titleButton setImage:[UIImage imageWithName:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    }
+}
 -(void)leftBtnItemClick{
     DEBUGLog(@"HLHomeViewController  ----leftBtnItemClick");
 }

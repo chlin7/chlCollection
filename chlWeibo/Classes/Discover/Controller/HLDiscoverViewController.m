@@ -7,6 +7,7 @@
 //
 
 #import "HLDiscoverViewController.h"
+#import "HLSearchBar.h"
 
 @interface HLDiscoverViewController ()
 
@@ -20,8 +21,10 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    HLSearchBar *searchBar = [HLSearchBar searchBar];
+    searchBar.frame = CGRectMake(0, 0, SCREEN_WIDTH-30, 30);
+    
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)didReceiveMemoryWarning {
