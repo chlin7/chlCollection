@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223E5C5B1B6DC37D00394DD3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 223E5C5A1B6DC37D00394DD3 /* README.md */; };
 		227CAD4E1B6CF241006A5D9D /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227CAD4B1B6CF241006A5D9D /* HLMineViewController.m */; };
 		227CAD541B6CF28A006A5D9D /* HLDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227CAD531B6CF28A006A5D9D /* HLDiscoverViewController.m */; };
 		227CAD5A1B6CF295006A5D9D /* HLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227CAD571B6CF295006A5D9D /* HLMessageViewController.m */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2202C9901B21D642003B9549 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		223E5C5A1B6DC37D00394DD3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		227CAD4A1B6CF241006A5D9D /* HLMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMineViewController.h; sourceTree = "<group>"; };
 		227CAD4B1B6CF241006A5D9D /* HLMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMineViewController.m; sourceTree = "<group>"; };
 		227CAD521B6CF28A006A5D9D /* HLDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDiscoverViewController.h; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		22F7CAE11B1F52FE0059EDF3 = {
 			isa = PBXGroup;
 			children = (
+				223E5C5A1B6DC37D00394DD3 /* README.md */,
 				22F7CAEC1B1F52FE0059EDF3 /* chlWeibo */,
 				22F7CB061B1F52FE0059EDF3 /* chlWeiboTests */,
 				22F7CAEB1B1F52FE0059EDF3 /* Products */,
@@ -501,6 +504,7 @@
 				22CC23671B6CA3350055FB53 /* HLBadgeButton.m in Sources */,
 				227CAD4E1B6CF241006A5D9D /* HLMineViewController.m in Sources */,
 				22CC23661B6CA3350055FB53 /* HLTabBarViewController.m in Sources */,
+				223E5C5B1B6DC37D00394DD3 /* README.md in Sources */,
 				227CAD601B6CF2A5006A5D9D /* HLHomeViewController.m in Sources */,
 				227CAD5A1B6CF295006A5D9D /* HLMessageViewController.m in Sources */,
 				22CC23771B6CB31C0055FB53 /* UIBarButtonItem+HL.m in Sources */,

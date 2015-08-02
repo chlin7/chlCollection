@@ -38,7 +38,7 @@
         }
         
     }
-    
+    //添加加号后处理（如果要去掉，还去屏蔽laysubview方法index大于1的时候x坐标的处理）
     UIButton *plushBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [plushBtn setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button"] forState:(UIControlStateNormal)];
     [plushBtn setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button_highlighted"] forState:(UIControlStateHighlighted)];
@@ -104,7 +104,7 @@
         CGFloat btnX = index*btnW;
         //1 取出按钮
         HLTabBarItem *btn = self.tabBarButtons[index];
-        
+        //添加加号后处理
         if (index > 1) {
             btnX += btnW;
         }
