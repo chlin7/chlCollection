@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HLTabBarViewController.h"
 #import "HLNewfeatureController.h"
+#import "HLOAuthViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,23 +22,25 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    NSString *versionKey = @"CFBundleVersion";
-    //取出沙盒中存取的版本号
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *lastVersion = [userDefault stringForKey:versionKey];
-    //获取当前的版本号(plists文件中)
-    NSString *currentVersion = [[NSBundle mainBundle].infoDictionary objectForKey:versionKey];
+    self.window.rootViewController = [[HLOAuthViewController alloc] init];
     
-    if ([currentVersion isEqualToString:lastVersion]) {
-        //显示状态栏
-        application.statusBarHidden = NO;
-        self.window.rootViewController = [[HLTabBarViewController alloc] init];
-    }else{//新版本更新
-        self.window.rootViewController = [[HLNewfeatureController alloc] init];
-        //存储新的版本号
-        [userDefault setObject:currentVersion forKey:versionKey];
-        [userDefault synchronize];
-    }
+//    NSString *versionKey = @"CFBundleVersion";
+//    //取出沙盒中存取的版本号
+//    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+//    NSString *lastVersion = [userDefault stringForKey:versionKey];
+//    //获取当前的版本号(plists文件中)
+//    NSString *currentVersion = [[NSBundle mainBundle].infoDictionary objectForKey:versionKey];
+//    
+//    if ([currentVersion isEqualToString:lastVersion]) {
+//        //显示状态栏
+//        application.statusBarHidden = NO;
+//        self.window.rootViewController = [[HLTabBarViewController alloc] init];
+//    }else{//新版本更新
+//        self.window.rootViewController = [[HLNewfeatureController alloc] init];
+//        //存储新的版本号
+//        [userDefault setObject:currentVersion forKey:versionKey];
+//        [userDefault synchronize];
+//    }
     
     [self.window makeKeyAndVisible];
     return YES;
