@@ -39,15 +39,15 @@
         
     }
     //添加加号后处理（如果要去掉，还去屏蔽laysubview方法index大于1的时候x坐标的处理）
-    UIButton *plushBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [plushBtn setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button"] forState:(UIControlStateNormal)];
-    [plushBtn setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button_highlighted"] forState:(UIControlStateHighlighted)];
-    [plushBtn setImage:[UIImage imageWithName:@"tabbar_compose_icon_add"] forState:(UIControlStateNormal)];
-    [plushBtn setImage:[UIImage imageWithName:@"tabbar_compose_icon_add_highlighted"] forState:(UIControlStateHighlighted)];
-    
-    plushBtn.bounds = CGRectMake(0, 0, plushBtn.currentBackgroundImage.size.width, plushBtn.currentBackgroundImage.size.height);
-    [self addSubview:plushBtn];
-    self.plushBtn = plushBtn;
+//    UIButton *plushBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [plushBtn setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button"] forState:(UIControlStateNormal)];
+//    [plushBtn setBackgroundImage:[UIImage imageWithName:@"tabbar_compose_button_highlighted"] forState:(UIControlStateHighlighted)];
+//    [plushBtn setImage:[UIImage imageWithName:@"tabbar_compose_icon_add"] forState:(UIControlStateNormal)];
+//    [plushBtn setImage:[UIImage imageWithName:@"tabbar_compose_icon_add_highlighted"] forState:(UIControlStateHighlighted)];
+//    
+//    plushBtn.bounds = CGRectMake(0, 0, plushBtn.currentBackgroundImage.size.width, plushBtn.currentBackgroundImage.size.height);
+//    [self addSubview:plushBtn];
+//    self.plushBtn = plushBtn;
     return self;
 }
 
@@ -105,9 +105,9 @@
         //1 取出按钮
         HLTabBarItem *btn = self.tabBarButtons[index];
         //添加加号后处理
-        if (index > 1) {
-            btnX += btnW;
-        }
+//        if (index > 1) {
+//            btnX += btnW;
+//        }
         //2 设置按钮frame
         [btn setFrame:CGRectMake(btnX, btnY, btnW, btnH)];
         

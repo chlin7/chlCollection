@@ -23,6 +23,7 @@
 		22CC23701B6CA5DA0055FB53 /* HLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC236F1B6CA5DA0055FB53 /* HLNavigationController.m */; };
 		22CC23771B6CB31C0055FB53 /* UIBarButtonItem+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23761B6CB31C0055FB53 /* UIBarButtonItem+HL.m */; };
 		22CC237A1B6CB3300055FB53 /* UIImage+HL.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC23791B6CB3300055FB53 /* UIImage+HL.m */; };
+		22F15C091B7244CB00904591 /* HLAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F15C081B7244CB00904591 /* HLAccount.m */; };
 		22F7CAF01B1F52FE0059EDF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CAEF1B1F52FE0059EDF3 /* main.m */; };
 		22F7CAF31B1F52FE0059EDF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F7CAF21B1F52FE0059EDF3 /* AppDelegate.m */; };
 		22F7CAFB1B1F52FE0059EDF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F7CAFA1B1F52FE0059EDF3 /* Images.xcassets */; };
@@ -74,6 +75,8 @@
 		22CC23761B6CB31C0055FB53 /* UIBarButtonItem+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HL.m"; sourceTree = "<group>"; };
 		22CC23781B6CB3300055FB53 /* UIImage+HL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HL.h"; sourceTree = "<group>"; };
 		22CC23791B6CB3300055FB53 /* UIImage+HL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HL.m"; sourceTree = "<group>"; };
+		22F15C071B7244CB00904591 /* HLAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAccount.h; sourceTree = "<group>"; };
+		22F15C081B7244CB00904591 /* HLAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAccount.m; sourceTree = "<group>"; };
 		22F7CAEA1B1F52FE0059EDF3 /* chlWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chlWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F7CAEE1B1F52FE0059EDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F7CAEF1B1F52FE0059EDF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		223992871B6FAE75007B32B7 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				22F15C061B7244AA00904591 /* Model */,
 				223992881B6FAE75007B32B7 /* Controller */,
 			);
 			path = OAuth;
@@ -369,6 +373,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		22F15C061B7244AA00904591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22F15C071B7244CB00904591 /* HLAccount.h */,
+				22F15C081B7244CB00904591 /* HLAccount.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		22F7CAE11B1F52FE0059EDF3 = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +609,7 @@
 				2239928B1B6FAE9F007B32B7 /* HLOAuthViewController.m in Sources */,
 				227CAD601B6CF2A5006A5D9D /* HLHomeViewController.m in Sources */,
 				227CAD5A1B6CF295006A5D9D /* HLMessageViewController.m in Sources */,
+				22F15C091B7244CB00904591 /* HLAccount.m in Sources */,
 				22CC23771B6CB31C0055FB53 /* UIBarButtonItem+HL.m in Sources */,
 				22F7CAF01B1F52FE0059EDF3 /* main.m in Sources */,
 				22CC23681B6CA3350055FB53 /* HLTabBar.m in Sources */,

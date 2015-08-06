@@ -10,6 +10,7 @@
 #import "HLTabBarViewController.h"
 #import "HLNewfeatureController.h"
 #import "HLOAuthViewController.h"
+#import "HLAccount.h"
 
 @interface AppDelegate ()
 
@@ -22,25 +23,33 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = [[HLOAuthViewController alloc] init];
+    //1.0先判断有无存储账号
     
-//    NSString *versionKey = @"CFBundleVersion";
-//    //取出沙盒中存取的版本号
-//    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-//    NSString *lastVersion = [userDefault stringForKey:versionKey];
-//    //获取当前的版本号(plists文件中)
-//    NSString *currentVersion = [[NSBundle mainBundle].infoDictionary objectForKey:versionKey];
-//    
-//    if ([currentVersion isEqualToString:lastVersion]) {
-//        //显示状态栏
-//        application.statusBarHidden = NO;
-//        self.window.rootViewController = [[HLTabBarViewController alloc] init];
-//    }else{//新版本更新
-//        self.window.rootViewController = [[HLNewfeatureController alloc] init];
-//        //存储新的版本号
-//        [userDefault setObject:currentVersion forKey:versionKey];
-//        [userDefault synchronize];
-//    }
+    //判断用户是否有存储的账号信息
+    NSString *doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *file = [doc stringByAppendingString:@"account.data"];
+    HLAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+    if (account) {
+        NSString *versionKey = @"CFBundleVersion";
+        //取出沙盒中存取的版本号
+        NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+        NSString *lastVersion = [userDefault stringForKey:versionKey];
+        //获取当前的版本号(plists文件中)
+        NSString *currentVersion = [[NSBundle mainBundle].infoDictionary objectForKey:versionKey];
+        
+        if ([currentVersion isEqualToString:lastVersion]) {
+            //显示状态栏
+            application.statusBarHidden = NO;
+            self.window.rootViewController = [[HLTabBarViewController alloc] init];
+        }else{//新版本更新
+            self.window.rootViewController = [[HLNewfeatureController alloc] init];
+            //存储新的版本号
+            [userDefault setObject:currentVersion forKey:versionKey];
+            [userDefault synchronize];
+        }
+    }else{
+        self.window.rootViewController = [[HLOAuthViewController alloc] init];
+    }
     
     [self.window makeKeyAndVisible];
     return YES;

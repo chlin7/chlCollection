@@ -15,6 +15,7 @@
     #import<UIKit/UIKit.h>
     #import<Foundation/Foundation.h>
 #import "UIImage+HL.h"
+#import "AFNetworking.h"
 
 //1.0判断系统版本
 #define IOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
