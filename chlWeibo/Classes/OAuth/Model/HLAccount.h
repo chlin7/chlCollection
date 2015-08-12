@@ -12,6 +12,9 @@
 
 @property(nonatomic,copy) NSString *access_token;
 
+//账号的过期时间
+@property(nonatomic,strong)NSDate *expiresTime;
+
 //如果服务器返回的数字很大，建议用long long
 @property(nonatomic,assign) long long expires_in;
 @property(nonatomic,assign) long long remind_in;
