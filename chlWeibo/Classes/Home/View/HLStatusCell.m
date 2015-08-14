@@ -90,9 +90,8 @@
         [self setupOriginalSubViews];
         //2.0添加被转发微博内部的字控件
         [self setupRetweetSubViews];
-        
         //3.0添加微博工具条的字控件
-        [self setupOStatusTool];
+        [self setupStatusTool];
     }
     return self;
 }
@@ -100,8 +99,17 @@
  *  添加原创微博内部的字控件
  */
 -(void)setupOriginalSubViews{
+    //设置cell选中情况下的背景
+//    UIImageView *bgView = [[UIImageView alloc] init];
+//    bgView.image = [UIImage resizedImageWithName:@"timeline_card_bottom_background_highlighted"];
+//    self.selectedBackgroundView = bgView;
+    //去掉选中默认的贪色
+    self.selectedBackgroundView = [[UIView alloc] init];
+    
     //1.最外边父控件
     UIImageView *topView = [[UIImageView alloc] init];
+    [topView setImage:[UIImage resizedImageWithName:@"timeline_card_top_background"]];
+    topView.highlightedImage = [UIImage resizedImageWithName:@"timeline_card_top_background_highlighted"];
     [self.contentView addSubview:topView];
     self.topView = topView;
     //2.头像
@@ -110,6 +118,7 @@
     self.iconView = iconView;
     //3.会员
     UIImageView *vipView = [[UIImageView alloc] init];
+    vipView.contentMode = UIViewContentModeCenter;
     [self.topView addSubview:vipView];
     self.vipView = vipView;
     //4.配图
@@ -118,21 +127,28 @@
     self.photoView = photoView;
     //5.昵称
     UILabel *nameLabel = [[UILabel alloc] init];
+    nameLabel.backgroundColor = [UIColor clearColor];
     [self.topView addSubview:nameLabel];
     nameLabel.font = HLStatusNameLabelFont;
     self.nameLabel = nameLabel;
     //6.时间
     UILabel *timeLabel = [[UILabel alloc] init];
+    timeLabel.backgroundColor = [UIColor clearColor];
+    [timeLabel setTextColor:HLColor(245, 140, 19)];
     [self.topView addSubview:timeLabel];
     timeLabel.font = HLStatusTimeLabelFont;
     self.timeLabel = timeLabel;
     //7.来源
     UILabel *sourceLabel = [[UILabel alloc] init];
+    sourceLabel.backgroundColor = [UIColor clearColor];
+    [timeLabel setTextColor:HLColor(135, 135, 135)];
     [self.topView addSubview:sourceLabel];
     sourceLabel.font = HLStatusSourceLabelFont;
     self.sourceLabel = sourceLabel;
     //8.正文
     UILabel *contentLabel = [[UILabel alloc] init];
+    contentLabel.backgroundColor = [UIColor clearColor];
+    [timeLabel setTextColor:HLColor(39, 39, 39)];
     contentLabel.numberOfLines = 0;
     [self.topView addSubview:contentLabel];
     contentLabel.font = HLStatusContentLabelFont;
@@ -144,32 +160,55 @@
 -(void)setupRetweetSubViews{
     //1.被转发微博的view
     UIImageView *retweetView = [[UIImageView alloc] init];
+    [retweetView setImage:[UIImage resizedImageWithName:@"timeline_retweet_background" left:0.9 top:0.5]];
     [self.topView addSubview:retweetView];
     self.retweetView = retweetView;
     //2.被转发微博作者的昵称
     UILabel *retweetNameLabel = [[UILabel alloc] init];
+    retweetNameLabel.backgroundColor = [UIColor clearColor];
     retweetNameLabel.font = HLStatusRetweetNameLabelFont;
     [self.retweetView addSubview:retweetNameLabel];
     self.retweetNameLabel = retweetNameLabel;
     //3.被转发微博的正文
     UILabel *retweetContentLabel = [[UILabel alloc] init];
+    retweetContentLabel.backgroundColor = [UIColor clearColor];
     retweetContentLabel.font = HLStatusRetweetContentLabelFont;
     retweetContentLabel.numberOfLines = 0;
     [self.retweetView addSubview:retweetContentLabel];
     self.retweetContentLabel = retweetContentLabel;
     //4.被转发微博的配图
     UIImageView *retweetPhotoView = [[UIImageView alloc] init];
-    [self.topView addSubview:retweetPhotoView];
+    [self.retweetView addSubview:retweetPhotoView];
     self.retweetPhotoView = retweetPhotoView;
 }
 /**
  *  添加微博工具条的字控件
  */
--(void)setupOStatusTool{
+-(void)setupStatusTool{
     //1.微博工具条view
     UIImageView *statusToolBarView = [[UIImageView alloc] init];
+    [statusToolBarView setImage:[UIImage resizedImageWithName:@"timeline_card_bottom_background"]];
+    statusToolBarView.highlightedImage = [UIImage resizedImageWithName:@"timeline_card_bottom_background_highlighted"];
     [self.contentView addSubview:statusToolBarView];
     self.statusToolBarView = statusToolBarView;
+    _statusToolBarView.frame = self.statusFrame.statusToolBarViewFrame;
+}
+/**
+ *  重写setFrame方法，设置艰巨
+ *
+ *  @param frame
+ */
+-(void)setFrame:(CGRect)frame{
+    
+    frame.origin.y += HLStatusTableBorder;
+    frame.origin.x = HLStatusTableBorder;
+    frame.size.width -= HLStatusTableBorder * 2;
+    /**
+     *  在计算cell的高度的时候加了一个HLStatusTableBorder，使两个cell之间拥有艰巨，
+     *  在这里剪掉防治选中cell的时候间距也变色
+     */
+    frame.size.height -= HLStatusTableBorder;
+    [super setFrame:frame];
 }
 /**
  *  传递数据模型
@@ -180,6 +219,14 @@
     [self setupOriginalData];
     //2.转发
     [self setupRetweetData];
+    //3.工具条
+    [self setupStatusToolBarData];
+}
+/**
+ *  设置原创微博的工具条
+ */
+-(void)setupStatusToolBarData{
+    self.statusToolBarView.frame = self.statusFrame.statusToolBarViewFrame;
 }
 /**
  *  设置原创微博的数据
@@ -207,12 +254,29 @@
     }else{
         self.vipView.hidden = YES;
     }
+    
+    
     //5.时间
     self.timeLabel.text = status.created_at;
-    self.timeLabel.frame = self.statusFrame.timeLabelFrame;
     //6.来源
     self.sourceLabel.text = status.source;
-    self.sourceLabel.frame = self.statusFrame.sourceLabelFrame;
+    /**
+     *  在此再次计算时间和来源的frame
+     */
+    CGFloat timeLabelX = self.statusFrame.nameLabelFrame.origin.x;
+    CGFloat timeLabelY = CGRectGetMaxY(self.statusFrame.nameLabelFrame) + HLStatusCellBorder*0.5;
+    CGSize timeLabelSize = [status.created_at sizeWithFont:HLStatusTimeLabelFont];
+    self.timeLabel.frame = (CGRect){{timeLabelX,timeLabelY},timeLabelSize};
+    
+    CGFloat sourceLabelX = CGRectGetMaxX(self.timeLabel.frame) + HLStatusCellBorder;
+    CGFloat sourceLabelY = timeLabelY;
+    CGSize sourceLabelSize = [status.source sizeWithFont:HLStatusSourceLabelFont];
+    self.sourceLabel.frame = (CGRect){{sourceLabelX,sourceLabelY},sourceLabelSize};
+    
+ 
+//    self.timeLabel.frame = self.statusFrame.timeLabelFrame;
+   
+//    self.sourceLabel.frame = self.statusFrame.sourceLabelFrame;
     
     //7.正文
     self.contentLabel.text = status.text;
@@ -238,7 +302,7 @@
         //1.转发微博的父控件
         self.retweetView.frame = self.statusFrame.retweetViewFrame;
         //2.转发微博的昵称
-        self.retweetNameLabel.text = retweetStatusUser.name;
+        self.retweetNameLabel.text = [NSString stringWithFormat:@"@%@",retweetStatusUser.name];
         self.retweetNameLabel.frame = self.statusFrame.retweetNameLabelFrame;
         //3.转发微博的正文
         self.retweetContentLabel.text = retweetStatus.text;

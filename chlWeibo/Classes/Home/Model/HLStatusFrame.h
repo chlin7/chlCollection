@@ -9,7 +9,7 @@
 /**
  *  cell的边框宽度
  */
-#define HLStatusCellBorder 5
+#define HLStatusCellBorder 10
 /**
  *  cell昵称的字体
  */
@@ -35,6 +35,10 @@
  *  cell被转发微博正文的字体
  */
 #define HLStatusRetweetContentLabelFont HLStatusContentLabelFont
+/**
+ *  微博展示边艰巨
+ */
+#define HLStatusTableBorder 5
 
 
 #import <Foundation/Foundation.h>
@@ -104,6 +108,6 @@
 /**
  微博的工具条view
  */
-@property(nonatomic,assign,readonly)UIImageView *statusToolBarViewFrame;
+@property(nonatomic,assign,readonly)CGRect statusToolBarViewFrame;
 
 @end

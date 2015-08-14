@@ -56,6 +56,12 @@
     [titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.titleView = titleBtn;
+    
+    [self.tableView setBackgroundColor:HLColor(226, 226, 226)];
+    //去掉分割线
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    //保证tableview底部不太紧密
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, HLStatusTableBorder, 0);
 }
 /**
  *  获取微博数据
@@ -67,7 +73,7 @@
     //2.0 封装请求对象
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:[HLAccountTool account].access_token forKey:@"access_token"];
-    [params setObject:@10 forKey:@"count"];
+    [params setObject:@12 forKey:@"count"];
     //3.0 发送请求
     [mgr GET:urlDef parameters:params success:^(AFHTTPRequestOperation *operation,id responseObject){
         NSArray *dicArray = [responseObject objectForKey:@"statuses"];
